@@ -4,161 +4,62 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- always check the referenced sources of JS and CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/lightbox-plus-jquery.min.js"></script> -->
-
-
     <style>
         * {
             box-sizing: border-box
         }
 
-        .Resume {
-            display: none
+        .resume-actions {
+            margin-top: 1.5rem;
         }
 
-        /* img {
-      vertical-align: middle;
-      max-width: 200px;
-      max-height: 300px;
-    } */
-
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 100%;
-            max-height: 100%;
-            position: relative;
-            margin: auto;
+        .resume-actions .button {
+            margin-right: 0.75rem;
         }
 
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: black;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
+        .skills-list {
+            columns: 2;
+            gap: 2rem;
         }
 
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a grey background color */
-        .prev:hover,
-        .next:hover {
-            background-color: #f1f1f1;
-            color: black;
-        }
-
-        .imagethumbnail {
-            max-width: 400px;
-            max-height: 600px;
+        @media screen and (max-width: 736px) {
+            .skills-list {
+                columns: 1;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- <h2 style="text-align:left">Recent Work</h2> -->
-    <!-- change class to row -->
-
-    <!-- <div class="row"> -->
-
     <header class="major">
         <h2>About Me</h2>
     </header>
-    <p>I'm a Software Engineer with 6 Years Experience in IT Operations and 3 Years as Power Platform Developer. 
-        <br>Passionate about building end-to-end software solutions to solve a particular business need and help ensure business-as-usual operations of the built software.
-        <br>
-         <br>I specialize in building solutions using Microsoft Power Platform. Developing and testing applications in Power Apps.
-         <br>Building automation using Power Automate. Deploying and managing Power Platform Applications.
-         <br>Having extensive experience in both Software Development and IT Operations, I believe my skills would contribute greatly 
-         to the team by being the bridge between technical and non-technical users.
-         <br>
-         <br>Please view my projects below.
-         <br>I'm open to new opportunities and looking forward to working with you.
-         <br>
-         <br>Thank you!
-         <br>
-         <br>Skills:
-         <br>Powerapps Canvas Apps, Model-Driven Apps, Common Data Services (Dataverse), Power Automate, Power BI 
-         <br>Sharepoint Online, Application Lifecycle Management, Powerapps Solutions, Software Development
-
+    <p>
+        Computer Science graduate with hands-on experience in web application development and growing expertise in the
+        Microsoft Power Platform. Strong foundation in JavaScript, HTML, CSS, REST APIs, and Agile delivery.
+        Certified in Microsoft Power Platform Fundamentals (PL-900) with practical project experience using Power Apps
+        and Power Automate. Motivated to grow as a frontend developer and contribute to modern, user-centered products.
     </p>
 
-<!-- Modal slideshow and clickable buttons for resume -->
+    <h3>Core Skills</h3>
+    <ul class="skills-list">
+        <li>Angular, React, TypeScript, JavaScript</li>
+        <li>HTML5, CSS/SCSS, responsive UI</li>
+        <li>REST APIs, frontend architecture</li>
+        <li>Power Apps (Model-Driven & Canvas)</li>
+        <li>Power Automate, Power Pages, Dataverse</li>
+        <li>Agile/Scrum, Jira, Confluence</li>
+        <li>Git, VS Code, Postman</li>
+        <li>Documentation & workflow analysis</li>
+    </ul>
 
-    <div class="Resume" style="display: block;">
-
+    <div class="resume-actions">
         <ul class="actions">
-
-            <li><a href="images/Resume/Platform - 1.png" data-lightbox="Resume" data-title="Work Experience"
-                    class="button">View My Resume</a></li>
-
-                    <li><a download href="assets/Jay K Delicana.pdf" class="button">Download My Resume</a></li>
+            <li><a href="assets/Faisal-Imam-Resume.pdf" class="button">Download Resume (PDF)</a></li>
+            <li><a href="#six" class="button">Contact Me</a></li>
         </ul>
-        
     </div>
-
-    <div class="Resume">
-        <a href="images/Resume/Platform - 2.png" data-lightbox="Resume" data-title="Software Engineer Experience">
-            <!-- <img src="images/Certificates/CERT-Fundamentals-Power-Platform.png">  -->
-        </a>
-    </div>
-
-    <div class="Resume">
-        <a href="images/Resume/Platform - 3.png" data-lightbox="Resume" data-title="Educational Background">
-        </a>
-    </div>
-
-    <div class="Resume">
-        <a href="images/Resume/Platform - 4.png" data-lightbox="Resume" data-title="Tranings / Certifications">
-        </a>
-    </div>
-
-    <!-- <ul class="actions">
-        <li><a href="images/thumbs/HQ-Component Library.jpg" class="button">Full Portfolio</a></li>
-    </ul> -->
-
-    <!-- </div> -->
-
-
-
-    <script>
-        let slideIndex = [1, 1, 1, 1];
-        let slideId = ["Resume"]
-        showSlides(1, 0);
-
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
-
-        function showSlides(n, no) {
-            let i;
-            let x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) { slideIndex[no] = 1 }
-            if (n < 1) { slideIndex[no] = x.length }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no] - 1].style.display = "block";
-        }
-    </script>
-
-
 
 </body>
 
