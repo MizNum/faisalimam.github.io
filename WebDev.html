@@ -14,10 +14,52 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 0.75rem;
       margin-bottom: 1.5rem;
+      background: #fff;
     }
 
     .project-card h3 {
       margin-top: 0;
+            margin-bottom: 0.75rem;
+    }
+
+    .project-description {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-highlights {
+      margin: 0 0 1rem 1.25rem;
+      padding: 0;
+    }
+
+    .project-highlights li {
+      margin-bottom: 0.5rem;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .image-card {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background: #fafafa;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-card p {
+      margin: 0;
+      padding: 0.5rem 0.65rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -26,23 +68,53 @@
   <div class="row">
     <article class="col-12 work-item">
       <div class="project-card">
-        <h3>AI-Powered Frontend Chatbot</h3>
-        <p>
-          Built an interactive chatbot experience with Angular, JavaScript, HTML, and CSS, focusing on intuitive UI and
-          clean information flow.
+        <h3>Enterprise Request & Multi-Level Approval System | Power Platform</h3>
+
+        <p class="project-description">
+          Architected and delivered a complete enterprise request workflow in Microsoft Power Platform, enabling
+          structured submissions, staged approvals, and transparent lifecycle tracking from request creation to final
+          decision.
         </p>
-        <p><strong>Highlights:</strong> real-time chat interaction, message history, responsive layout</p>
-        <p><strong>Skills:</strong> Angular, JavaScript, HTML, CSS</p>
-      </div>
-    </article>
-    <article class="col-12 work-item">
-      <div class="project-card">
-        <h3>Responsive Web Applications</h3>
-        <p>
-          Delivered cross-device web interfaces with consistent UI/UX behavior and performance, integrating REST APIs
-          and collaborating with stakeholders to refine workflows.
-        </p>
-        <p><strong>Skills:</strong> React, REST APIs, UI/UX, documentation</p>
+        
+        <ul class="project-highlights">
+          <li>Designed a Dataverse-backed data model with normalized tables, relationships, approval history, and
+            audit-ready status traceability.</li>
+          <li>Built a Model-Driven Power App for requestors and approvers to submit requests, review approval stages,
+            record decisions, and monitor live status updates.</li>
+          <li>Implemented a Power Automate approval engine using Dataverse triggers, branching logic, and loop-based
+            orchestration to dynamically generate approval levels, process approve/reject outcomes, and update final
+            request state.</li>
+        </ul>
+
+        <p><strong>Skills:</strong> Microsoft Dataverse, Model-Driven Power Apps, Power Automate, Workflow Design,
+          Process Automation</p>
+
+        <div class="image-grid">
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-1.png" alt="Power Automate flow - screenshot 1">
+            <p>Screenshot 1: Power Automate initialization and approval loop setup.</p>
+          </figure>
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-2.png" alt="Power Automate flow - screenshot 2">
+            <p>Screenshot 2: Multi-branch approval and rejection decision logic.</p>
+          </figure>
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-3.png" alt="Dataverse tables view">
+            <p>Screenshot 3: Dataverse table structure for request and approval entities.</p>
+          </figure>
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-4.png" alt="Power Platform solution components">
+            <p>Screenshot 4: Solution components including app, flow, tables, and choices.</p>
+          </figure>
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-5.png" alt="Model-Driven app request list">
+            <p>Screenshot 5: Model-Driven app request and approval workspace.</p>
+          </figure>
+          <figure class="image-card">
+            <img src="images/power-platform-project/request-approval-6.png" alt="Approval analytics dashboard">
+            <p>Screenshot 6: Approval analytics and action trends dashboard.</p>
+          </figure>
+        </div>
       </div>
     </article>
   </div>
