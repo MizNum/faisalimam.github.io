@@ -17,6 +17,25 @@
 		* {
 			box-sizing: border-box;
 		}
+		
+		.header-skills-logos {
+			margin-top: 1rem;
+			display: grid;
+			gap: 0.6rem;
+			justify-items: center;
+		}
+
+		.header-skills-logos img {
+			max-width: 300px;
+			width: 100%;
+			height: auto;
+		}
+
+		@media screen and (max-width: 736px) {
+			.header-skills-logos img {
+				max-width: 240px;
+			}
+		}
 	</style>
 
 	<meta name="description" content="Faisal Imam - Front-end Developer and Power Platform Developer portfolio." />
@@ -38,6 +57,10 @@
 					<strong>Faisal Imam</strong><br>
 					Front-end Developer | Power Platform Developer
 				</h1>
+					<div class="header-skills-logos">
+				<img src="images/powerplatform-logo.png" alt="Microsoft Power Platform logos" />
+				<img src="images/frontend-logo.png" alt="Front-end development logos" />
+			</div>
 		</div>
 	</header>
 
